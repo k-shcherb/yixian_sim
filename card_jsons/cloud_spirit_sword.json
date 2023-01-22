@@ -1,0 +1,210 @@
+[
+    {
+        "name": "Cloud Sword - Touch Earth ",
+        "text": "4 ATK Cloud Hit: DEF+4 "
+    },
+    {
+        "name": "Light Sword ",
+        "text": "4 ATK Qi+l "
+    },
+    {
+        "name": "Guard Qi ",
+        "text": "Qi+l DEF+5 "
+    },
+    {
+        "name": "Qi Perfusion ",
+        "text": "Qi+2 Next 1 attack(s) Ignore DEF "
+    },
+    {
+        "name": "Sword Intent ",
+        "text": "R  Increase your existing Sword Intent stacks by 80% "
+    },
+    {
+        "name": "Rule Sky Sword ",
+        "text": "If you have more than 0 DEF, this card coggumes no i DEF+6 Chase "
+    },
+    {
+        "name": "Giant Tiger ",
+        "text": "10 ATK "
+    },
+    {
+        "name": "Cloud Sword - Dragon Roam ",
+        "text": "2ATK X 2 Cloud Hit: DEF+3 Injured: Chase "
+    },
+    {
+        "name": "Cloud Sword - Step Lightly ",
+        "text": "2 ATK X 2 Cloud Hit: For each successive \"Cloud Sword\" played before this card, gain 3 DEF "
+    },
+    {
+        "name": "Flying Spirit Shade Sword ",
+        "text": "1ATXK X 4 Add 1 Qi for every attack that Injured the opponent "
+    },
+    {
+        "name": "Dharma Spirit Sword ",
+        "text": "5 ATK Exhaust Qi, add 5 ATK for each point exhausted "
+    },
+    {
+        "name": "Chain Sword Formation ",
+        "text": "DEF+1 Retrigger the previous \u201cSword Formation\u2122 card in the deck "
+    },
+    {
+        "name": "Unrestrained Sword - Zero ",
+        "text": "Continuous: Whenever \"Unrestrained Sword\" Injured the opponent, add 30% of damage as HP "
+    },
+    {
+        "name": "Egret Spirit ",
+        "text": "5 ATK Add 2 ATK for each Qi "
+    },
+    {
+        "name": "Giant Kun Spirit ",
+        "text": "10 ATK DEF+10 Chase "
+    },
+    {
+        "name": "Cloud Sword - Flash Wind ",
+        "text": "4 ATK Cloud Hit: Chase "
+    },
+    {
+        "name": "Cloud Sword - { Moon Shade ",
+        "text": "DEF+1 Cloud Hit: Gain 2 stacks of Increase ATK "
+    },
+    {
+        "name": "Thunder Sword ",
+        "text": "5 ATK Injured: Make an additional 6 ATK "
+    },
+    {
+        "name": "Spirit Gather _ Citta-Dharma ",
+        "text": "Qi+l Continuous: Add 1 Qi every 2 turns "
+    },
+    {
+        "name": "CentiBird Sp|r|t Sword Rhythm ",
+        "text": "Qi+l Continuous: The \"Spirit Sword\" card's Qi cost  decrease 1 "
+    },
+    {
+        "name": "Flow Cloud Chao} ",
+        "text": "2ATK X 4 "
+    },
+    {
+        "name": "Inspiration Sword ",
+        "text": "8 ATK Injured: Add 1 Sword Intent for each point of Qi (Up to 8) "
+    },
+    {
+        "name": "Unrestrained Sword - Twe ",
+        "text": "4 ATK For each \"Unrestrained Sword\u201d you played in this battle, make an additional attack "
+    },
+    {
+        "name": "Moon Water Sword Formation ",
+        "text": "DEF+10 At the beginning of your next 3 turns, your DEF will not halve "
+    },
+    {
+        "name": "Cloud Citta- Dharma ",
+        "text": "Continuous: Whenever you play a \"Cloud Sword\",  heal 2 HP "
+    },
+    {
+        "name": "Cloud Sword - Necessity ",
+        "text": "4 ATK X 2 Cloud Hit: Next 1 times attack Ignore DEF "
+    },
+    {
+        "name": "Cloud Sword - Pierce the Star ",
+        "text": "Qi+2 0 ATK (Add 1 ATK for each Qi) "
+    },
+    {
+        "name": "- Cloud Sword - Spirit Coercion ",
+        "text": "7 ATK Cloud Hit: For every successive \"Cloud Sword\" played before this card, add 1 Qi "
+    },
+    {
+        "name": "Flying Fang Sword ",
+        "text": "8 ATK Injured: Return the Sword Intent  used by this attack "
+    },
+    {
+        "name": "Cloud Dance Rhythm ",
+        "text": "Qi+2 DEF+2 Sword Intent+2 "
+    },
+    {
+        "name": "Raven Spirit Sword ",
+        "text": "5 ATX Add 2 DEF for each Qi "
+    },
+    {
+        "name": "Burst Sword ",
+        "text": "11 ATK Injured: Opponent loses 1 Qi "
+    },
+    {
+        "name": "Giant Roc Spirit ",
+        "text": "9 ATK If Qi is greater than 0, Chase "
+    },
+    {
+        "name": "Reflexive Sword ",
+        "text": "10 ATK Injured: Add 6 DEF in your next turn "
+    },
+    {
+        "name": "Mirror Flower Sword Formation ",
+        "text": "DEF+3 0 ATK (Add 1 ATK for each 1 DEF) "
+    },
+    {
+        "name": "Tri-Peak Sword ",
+        "text": "3ATK X 3 "
+    },
+    {
+        "name": "Giant Whale ",
+        "text": "16 ATK "
+    },
+    {
+        "name": "Cloud Sword - Reguard ",
+        "text": "DEF+8 Cloud Hit: HP+3 "
+    },
+    {
+        "name": "Cloud Sword - Riddle ",
+        "text": "6 ATK Cloud Hit: Sword Intent+2 "
+    },
+    {
+        "name": "Sword Slash ",
+        "text": "4 ATK Sword Intent+2 "
+    },
+    {
+        "name": "Cloud Sword - : Conceal > ",
+        "text": "Cloud Hit: 9 ATK "
+    },
+    {
+        "name": "Transforming Spirits Rhythm ",
+        "text": "Qi+3 "
+    },
+    {
+        "name": "Spiritage Sword ",
+        "text": "Qi+2 If Qi is greater than 2, make an additional 2 ATK 2 times "
+    },
+    {
+        "name": "Earth Evil Sword ",
+        "text": "8 ATK Injured: Add DEF for each damage  dealt to HP "
+    },
+    {
+        "name": "Form-Intention ",
+        "text": "8 ATK Injured: Sword Intent+3 "
+    },
+    {
+        "name": "Contemplate Spirits Rhythm ",
+        "text": "Qi+l Sword Intent+3 "
+    },
+    {
+        "name": "Consonance Sword Formation ",
+        "text": "DEF+9 Exhaust Sword Intent, add 1 Qi for each point exhausted "
+    },
+    {
+        "name": "Unrestrained Sword - One ",
+        "text": "5 ATK For each \"Unrestrained Sword\" you played in this battte, this card adds 2 more ATK "
+    },
+    {
+        "name": "Cloud Sword - Touch Sky ",
+        "text": "6 ATK "
+    },
+    {
+        "name": "Cloud Sword - Fleche ",
+        "text": "5 ATK Cloud Hit: Make an additional 3  ATK "
+    },
+    {
+        "name": "Sword Defence ",
+        "text": "DEF+4 Sword Intent+2 "
+    },
+    {
+        "name": "Wind Sword ",
+        "text": "3ATK X 2 "
+    }
+]
