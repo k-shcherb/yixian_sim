@@ -8,3 +8,4 @@ edition = "2021"
 [dependencies]
 serde = { version= "1.0.144", features = ["derive"]}
 rand = { version= "0.8.5"}
+serde_json = {version="1.0.91"}

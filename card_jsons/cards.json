@@ -1,0 +1,274 @@
+[
+{
+    "name": "Cloud Sword - Touch Earth",
+    "level": 1,
+    "cost": 0,
+    "actions": [
+        {
+            "Attack": {"hits": 1, "damage": 4, "additional_effects": []}
+        }
+    ],
+    "tags": ["Cloud"]
+},
+{
+    "name": "Cloud Sword - Touch Earth",
+    "level": 2,
+    "cost": 0,
+    "actions": [
+        {
+            "Attack": {"hits": 1, "damage": 6, "additional_effects": []}
+        }
+    ],
+    "tags": ["Cloud"]
+},
+{
+    "name": "Cloud Sword - Touch Earth",
+    "level": 3,
+    "cost": 0,
+    "actions": [
+        {
+            "Attack": {"hits": 1, "damage": 8, "additional_effects": []}
+        }
+    ],
+    "tags": ["Cloud"]
+},
+
+{
+    "name": "Light Sword",
+    "level": 1,
+    "cost":0,
+    "actions": [
+        {
+            "Attack": {"hits": 1, "damage": 4, "additional_effects": []}
+        },
+        {
+            "AddQi": {"amount": 1}
+        }
+    ],
+    "tags": []
+},
+{
+    "name": "Light Sword",
+    "level": 2,
+    "cost":0,
+    "actions": [
+        {
+            "Attack": {"hits": 1, "damage": 4, "additional_effects": []}
+        },
+        {
+            "AddQi": {"amount": 1}
+        }
+    ],
+    "tags": []
+},
+{
+    "name": "Light Sword",
+    "level": 3,
+    "cost":0,
+    "actions": [
+        {
+            "Attack": {"hits": 1, "damage": 4, "additional_effects": []}
+        },
+        {
+            "AddQi": {"amount": 1}
+        }
+    ],
+    "tags": []
+},
+
+{
+    "name": "Guard Qi",
+    "level": 1,
+    "cost": 0,
+    "actions": [
+        {
+            "AddQi": {"amount": 1}
+        },
+        {
+            "Defend": { "amount": 5, "additional_effects": []}
+        }
+
+    ],
+    "tags": []
+},
+{
+    "name": "Guard Qi",
+    "level": 2,
+    "cost": 0,
+    "actions": [
+        {
+            "AddQi": {"amount": 2}
+        },
+        {
+            "Defend": { "amount": 5, "additional_effects": []}
+        }
+
+    ],
+    "tags": []
+},
+{
+    "name": "Guard Qi",
+    "level": 3,
+    "cost": 0,
+    "actions": [
+        {
+            "AddQi": {"amount": 3}
+        },
+        {
+            "Defend": { "amount": 5, "additional_effects": []}
+        }
+
+    ],
+    "tags": []
+},
+
+{
+    "name": "Qi Perfusion",
+    "level": 1,
+    "cost": 0,
+    "actions": [
+        {
+            "AddQi": {"amount": 2}
+        },
+        {
+            "AddIgnoreDef": {"amount": 1}
+        }
+    ],
+    "tags": []
+},
+{
+    "name": "Qi Perfusion",
+    "level": 2,
+    "cost": 0,
+    "actions": [
+        {
+            "AddQi": {"amount": 3}
+        },
+        {
+            "AddIgnoreDef": {"amount": 1}
+        }
+    ],
+    "tags": []
+},
+{
+    "name": "Qi Perfusion",
+    "level": 3,
+    "cost": 0,
+    "actions": [
+        {
+            "AddQi": {"amount": 4}
+        },
+        {
+            "AddIgnoreDef": {"amount": 1}
+        }
+    ],
+    "tags": []
+},
+
+{
+    "name": "Cloud Sword - Touch Sky",
+    "level": 1,
+    "cost": 0,
+    "actions": [
+        {
+            "Attack": {"hits": 1, "damage": 6, "additional_effects": []}
+        }
+    ],
+    "tags": ["Cloud"]
+},
+{
+    "name": "Cloud Sword - Touch Sky",
+    "level": 2,
+    "cost": 0,
+    "actions": [
+        {
+            "Attack": {"hits": 1, "damage": 9, "additional_effects": []}
+        }
+    ],
+    "tags": ["Cloud"]
+},
+{
+    "name": "Cloud Sword - Touch Sky",
+    "level": 3,
+    "cost": 0,
+    "actions": [
+        {
+            "Attack": {"hits": 1, "damage": 12, "additional_effects": []}
+        }
+    ],
+    "tags": ["Cloud"]
+},
+
+{
+    "name": "Wind Sword",
+    "level": 1,
+    "cost": 0,
+    "actions": [
+        {
+            "Attack": {"hits": 2, "damage": 3, "additional_effects": []} 
+        }
+    ],
+    "tags": []
+},
+{
+    "name": "Wind Sword",
+    "level": 2,
+    "cost": 0,
+    "actions": [
+        {
+            "Attack": {"hits": 2, "damage": 4, "additional_effects": []} 
+        }
+    ],
+    "tags": []
+},
+{
+    "name": "Wind Sword",
+    "level": 3,
+    "cost": 0,
+    "actions": [
+        {
+            "Attack": {"hits": 2, "damage": 5, "additional_effects": []} 
+        }
+    ],
+    "tags": []
+},
+
+{
+    "name": "Sword Defence",
+    "level": 1,
+    "cost": 0,
+    "actions": [
+        {"Defend": {"amount": 4, "additional_effects": []}},
+        {"AddSwordIntent": {"amount": 2, "additional_effects": []}}
+    ]
+},
+{
+    "name": "Sword Defence",
+    "level": 2,
+    "cost": 0,
+    "actions": [
+        {"Defend": {"amount": 5, "additional_effects": []}},
+        {"AddSwordIntent": {"amount": 3, "additional_effects": []}}
+    ]
+},
+{
+    "name": "Sword Defence",
+    "level": 1,
+    "cost": 0,
+    "actions": [
+        {"Defend": {"amount": 6, "additional_effects": []}},
+        {"AddSwordIntent": {"amount": 4, "additional_effects": []}}
+    ]
+},
+
+{
+    "name": "Cloud Sword - Fleche",
+    "level": 1,
+    "cost": 0,
+    "actions": [
+        {"Attack": {"hits": 1, "damage": 5, "additional_effects": []}},
+        {"Attack": {"hits": 1, "damage": 3, "additional_effects": ["NeedsCloud"]}}
+    ],
+    "tags": ["Cloud"]
+}
+]

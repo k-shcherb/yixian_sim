@@ -1,8 +1,9 @@
 use serde::{Serialize, Deserialize};
-use std::marker::PhantomData;
+use rand::prelude::*;
 
 #[derive(Serialize, Deserialize, Debug, Clone, Copy)]
-struct Character<'a> {
+struct Character {
+    player_num: Player,
     max_hp: i32,
     hp: i32,
     qi: i32,
@@ -16,12 +17,12 @@ struct Character<'a> {
     sword_intent: i32,
     cloud_count: i32,
     unrestrained_count: i32,
-    phantom: PhantomData<&'a i32>,
 }
 
-impl Character<'_> {
-    fn from<'a>(health: i32) -> Character<'a> {
+impl Character {
+    fn from(health: i32, player_num: Player) -> Character {
         Character{
+            player_num,
             max_hp: health,
             hp: health,
             qi: 0,
@@ -35,45 +36,52 @@ impl Character<'_> {
             sword_intent: 0,
             cloud_count: 0,
             unrestrained_count: 0,
-            phantom: PhantomData
         }
     }
 }
 
-#[derive(Serialize, Deserialize, Debug)]
-enum CharacterType {
-    Player,
-    Opponent,
+#[derive(Serialize, Deserialize, Debug, Copy, Clone)]
+enum Player {
+    One,
+    Two,
+}
+
+struct Game {
+    players: Vec<Character>
+}
+
+#[derive(Serialize, Deserialize, Debug, Copy, Clone)]
+enum CardAction {
+    Attack {hits: i32, damage: i32, opponent: Player},
+    Defend { amount: i32, player: Player},
+    ApplyFlaw {amount: i32, opponent: Player},
+    ApplyWeak {amount: i32, opponent: Player},
+    ApplyInjury {amount: i32, opponent: Player},
+    ApplyHexagram {amount: i32, player: Player},
+    Heal{amount: i32, player: Player},
+    AddMaxHp{amounts: i32, player: Player},
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-struct Card<'a> {
+struct Card {
     name: String,
-    actions: Vec<CardAction<'a>>,
+    actions: Vec<CardAction>,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
-enum CardAction<'a> {
-    Attack {hits: i32, damage: i32, player: &'a mut Character<'a>, opponent: &'a mut Character<'a>},
-    Defend {amount: i32, player: &'a mut Character<'a>},
-    ApplyFlaw {amount: i32, opponent: &'a mut Character<'a>},
-    ApplyWeak {amount: i32, opponent: &'a mut Character<'a>},
-    ApplyInjury {amount: i32, opponent: &'a mut Character<'a>},
-    ApplyHexagram {amount: i32, player: &'a mut Character<'a>},
-    Heal {amount: i32, player: &'a mut Character<'a>},
-    AddMaxHp {amount: i32, player: &'a mut Character<'a>},
-    
-}
-
-impl Card<'_> {
-    fn attack(&self, hits: i32, damage: i32, player: &mut Character, opponent: &mut Character) {
-        for i in 0..hits {
-            let actual_damage = (damage + player.attack_up + player.sword_intent) as f32 * (if opponent.flaw > 0 {1.4} else {1.0}) * (if player.weak > 0 {0.6} else {1.0}) - 
-                opponent.defense as f32;
+impl Card {
+    fn attack(&self, hits: &i32, damage: &i32, player: &mut Character, opponent: &mut Character) {
+        for i in 0..hits.clone() {
+            let actual_damage = (damage + player.attack_up + player.sword_intent) as f32 * (if opponent.flaw > 0 {1.4} else {1.0}) * (if player.weak > 0 {0.6} else {1.0});
             
             let actual_damage = actual_damage.floor();
-
-            println!("{}", actual_damage);
+            if opponent.defense > actual_damage as i32 {
+                opponent.defense -= actual_damage as i32;
+            }
+            else {
+                opponent.hp -= actual_damage as i32 - opponent.defense;
+                opponent.defense = 0;
+            }
+            trigger_defenses();
         }
     }
 
@@ -110,31 +118,55 @@ impl Card<'_> {
         println!("{}", arg1);
     }
 
-    fn perform_actions(&self, actions: Vec<fn()>, player: &mut Character, opponent: &mut Character) {
-        for i in actions {
-            i();
-        }
+    fn perform_actions(&self, player: &mut Character, opponent: &mut Character) {
+        let players = 
+        for i in &self.actions {
+            match i {
+                CardAction::Attack { hits, damage, opponent} => self.attack(hits, damage, player, opponent),
+                CardAction::Defend { amount, player } => todo!(),
+                CardAction::ApplyFlaw { amount, opponent } => todo!(),
+                CardAction::ApplyWeak { amount, opponent } => todo!(),
+                CardAction::ApplyInjury { amount, opponent } => todo!(),
+                CardAction::ApplyHexagram { amount, player } => todo!(),
+                CardAction::Heal { amount, player } => todo!(),
+                CardAction::AddMaxHp { amounts, player } => todo!(),
+            }
+        };
     }
 
 }
 
+fn trigger_defenses() {
+    todo!();
+}
+
+
 fn main() {
-    let mut char1 = Character::from(50);
-    let mut char2 = Character::from(60);
+    let mut char1 = Character::from(50, Player::One);
+    let mut char2 = Character::from(60, Player::Two);
+
+    let sample_card1 = Card {name: String::from("Multihit Attack"),
+                                    actions: vec![
+                                        CardAction::Attack{hits: 2, damage: 4, opponent: Player::Two}
+                                    ]};
+    let sample_card2 = Card {name: String::from("Attack and defend"),
+                                    actions: vec![
+                                        CardAction::Attack{hits: 1, damage: 5, opponent: Player::One},
+                                        CardAction::Defend { amount: 4, player: Player::Two }
+                                    ]};
+
+    let mut game = Game { players: vec![char1, char2]};
+    while &game.players[0].hp > &0 && &game.players[1].hp > &0 {
+        for i in 0..2 {
+            let dmg = rand::thread_rng().gen_range(0..10);
+            match game.players[i].player_num {
+                Player::One => game.players[1].hp -= dmg,
+                Player::Two => game.players[0].hp -= dmg,
+            }
+            println!("player {:?} took {} damage", i, dmg);
+        }
+    }
 
     
-
-    let mut card1 = Card{name: String::from("basic attack")}, vec!;
-
-    let mut funcs: Vec<fn()> = Vec::new();
-
-    card1.apply_flaw(2, &mut char2);
-    card1.attack(1, 12, &mut char1, &mut char2);
-
-    take_turn(&mut char1, &mut char2);
-}
-
-fn take_turn(c1: &mut Character, c2: &mut Character ) {
-    println!("{} {}", c1.hp, c2.hp);
-
-}
+    
+}   
